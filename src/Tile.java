@@ -16,4 +16,10 @@ public class Tile {
             System.out.println("Invalid move! Tile full!");
         }
     }
+    public String toString(){
+        if (this.piece == null) {
+            return ". ";
+        }
+        return Character.toString(this.piece.symbol)+ " ";
+    }
 }
