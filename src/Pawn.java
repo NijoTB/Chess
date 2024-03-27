@@ -14,6 +14,14 @@ public class Pawn extends Piece{
                 return true;
             }
         }
+
+        if (color == ChessColor.BLACK) {
+            if (move.nextX == move.currentX +1 && move.currentY == move.nextY) {
+                return true;
+            } else if (move.currentX == 1 && move.nextX == move.currentX +2 && move.currentY == move.nextY) {
+                return true;
+            }
+        }
         return false;
     }
 

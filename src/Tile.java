@@ -18,8 +18,9 @@ public class Tile {
     }
     public String toString(){
         if (this.piece == null) {
-            return ". ";
+            return "   ";
         }
-        return Character.toString(this.piece.symbol)+ " ";
+       return Character.toString(this.piece.symbol);
+
     }
 }
