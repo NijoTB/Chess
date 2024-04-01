@@ -9,6 +9,11 @@ public  abstract class Piece {
         this.symbol = symbol;
     }
 
+
+    public String toString() {
+        return Character.toString(symbol);
+    }
+
     public abstract boolean canMove(Move move);
 
 
