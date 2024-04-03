@@ -5,6 +5,7 @@ public class Rook extends IterationPiece {
 
     public Rook(String id, ChessColor color, char symbol) {
         super(id, color, symbol, moveSet);
+
     }
 
 
