@@ -11,7 +11,7 @@ public class QueenTests {
         Board testBoard = new Board(false);
         Move moveUp = new Move(0,0,0, 5);
 
-        Rook moveTest = new Rook( "queen", ChessColor.WHITE, '♛' );
+        Queen moveTest = new Queen( "queen", ChessColor.WHITE, '♛' );
 
         assertTrue(moveTest.canMove(moveUp));
     }
@@ -20,7 +20,7 @@ public class QueenTests {
         Board testBoard = new Board(false);
         Move moveUp = new Move(3,0,3, 7);
 
-        Rook moveTest = new Rook( "queen", ChessColor.WHITE, '♛' );
+        Queen moveTest = new Queen( "queen", ChessColor.WHITE, '♛' );
 
         assertTrue(moveTest.canMove(moveUp));
     }
@@ -33,7 +33,7 @@ public class QueenTests {
         Board testBoard = new Board(false);
         Move moveDown = new Move(4,6,4, 2);
 
-        Rook moveTest = new Rook( "queen", ChessColor.WHITE, '♛' );
+        Queen moveTest = new Queen( "queen", ChessColor.WHITE, '♛' );
 
         assertTrue(moveTest.canMove(moveDown));
     }
@@ -42,7 +42,7 @@ public class QueenTests {
         Board testBoard = new Board(false);
         Move moveDown = new Move(2,7,2, 1);
 
-        Rook moveTest = new Rook( "queen", ChessColor.WHITE, '♛' );
+        Queen moveTest = new Queen( "queen", ChessColor.WHITE, '♛' );
 
         assertTrue(moveTest.canMove(moveDown));
     }
@@ -54,7 +54,7 @@ public class QueenTests {
         Board testBoard = new Board(false);
         Move moveLeft = new Move(6,5,3, 5);
 
-        Rook moveTest = new Rook( "queen", ChessColor.WHITE, '♛' );
+        Queen moveTest = new Queen( "queen", ChessColor.WHITE, '♛' );
 
         assertTrue(moveTest.canMove(moveLeft));
     }
@@ -63,7 +63,7 @@ public class QueenTests {
         Board testBoard = new Board(false);
         Move moveLeft = new Move(4,7,3, 7);
 
-        Rook moveTest = new Rook( "queen", ChessColor.WHITE, '♛' );
+        Queen moveTest = new Queen( "queen", ChessColor.WHITE, '♛' );
 
         assertTrue(moveTest.canMove(moveLeft));
     }
@@ -75,7 +75,7 @@ public class QueenTests {
         Board testBoard = new Board(false);
         Move moveRight = new Move(0,0,5, 0);
 
-        Rook moveTest = new Rook( "queen", ChessColor.WHITE, '♛' );
+        Queen moveTest = new Queen( "queen", ChessColor.WHITE, '♛' );
 
         assertTrue(moveTest.canMove(moveRight));
     }
@@ -84,7 +84,7 @@ public class QueenTests {
         Board testBoard = new Board(false);
         Move moveRight = new Move(1,1,3, 1);
 
-        Rook moveTest = new Rook( "queen", ChessColor.WHITE, '♛' );
+        Queen moveTest = new Queen( "queen", ChessColor.WHITE, '♛' );
 
         assertTrue(moveTest.canMove(moveRight));
     }
@@ -96,7 +96,7 @@ public class QueenTests {
         Board testBoard = new Board(false);
         Move moveBottomRight = new Move(0,0,5, 5);
 
-        Bishop moveTest = new Bishop( "queen", ChessColor.WHITE, '♛' );
+        Queen moveTest = new Queen( "queen", ChessColor.WHITE, '♛' );
 
         assertTrue(moveTest.canMove(moveBottomRight));
     }
@@ -105,7 +105,7 @@ public class QueenTests {
         Board testBoard = new Board(false);
         Move moveBottomRight = new Move(1,2,2, 3);
 
-        Bishop moveTest = new Bishop( "queen", ChessColor.WHITE, '♛' );
+        Queen moveTest = new Queen( "queen", ChessColor.WHITE, '♛' );
 
         assertTrue(moveTest.canMove(moveBottomRight));
     }
@@ -117,7 +117,7 @@ public class QueenTests {
         Board testBoard = new Board(false);
         Move moveBottomLeft = new Move(7,0,0, 7);
 
-        Bishop moveTest = new Bishop( "queen", ChessColor.WHITE, '♛' );
+        Queen moveTest = new Queen( "queen", ChessColor.WHITE, '♛' );
 
         assertTrue(moveTest.canMove(moveBottomLeft));
     }
@@ -126,7 +126,7 @@ public class QueenTests {
         Board testBoard = new Board(false);
         Move moveBottomLeft = new Move(7,5,5, 7);
 
-        Bishop moveTest = new Bishop( "queen", ChessColor.WHITE, '♛' );
+        Queen moveTest = new Queen( "queen", ChessColor.WHITE, '♛' );
 
         assertTrue(moveTest.canMove(moveBottomLeft));
     }
@@ -138,7 +138,7 @@ public class QueenTests {
         Board testBoard = new Board(false);
         Move moveTopRight = new Move(6,6,1, 1);
 
-        Bishop moveTest = new Bishop( "queen", ChessColor.WHITE, '♛' );
+        Queen moveTest = new Queen( "queen", ChessColor.WHITE, '♛' );
 
         assertTrue(moveTest.canMove(moveTopRight));
     }
@@ -147,7 +147,7 @@ public class QueenTests {
         Board testBoard = new Board(false);
         Move moveTopRight = new Move(3,6,6, 3);
 
-        Bishop moveTest = new Bishop( "queen", ChessColor.WHITE, '♛' );
+        Queen moveTest = new Queen( "queen", ChessColor.WHITE, '♛' );
 
         assertTrue(moveTest.canMove(moveTopRight));
     }
@@ -159,7 +159,7 @@ public class QueenTests {
         Board testBoard = new Board(false);
         Move moveTopLeft = new Move(6,6,0, 0);
 
-        Bishop moveTest = new Bishop( "queen", ChessColor.WHITE, '♛' );
+        Queen moveTest = new Queen( "queen", ChessColor.WHITE, '♛' );
 
         assertTrue(moveTest.canMove(moveTopLeft));
     }
@@ -168,7 +168,7 @@ public class QueenTests {
         Board testBoard = new Board(false);
         Move moveTopLeft = new Move(5,7,1, 3);
 
-        Bishop moveTest = new Bishop( "queen", ChessColor.WHITE, '♛' );
+        Queen moveTest = new Queen( "queen", ChessColor.WHITE, '♛' );
 
         assertTrue(moveTest.canMove(moveTopLeft));
     }
@@ -178,18 +178,18 @@ public class QueenTests {
     @Test
     public void queenMoveSomewhereRandom(){
         Board testBoard = new Board(false);
-        Move moveSomewhereRandom = new Move(7,7,7, 0);
+        Move moveSomewhereRandom = new Move(7,7,3, 0);
 
-        Bishop moveTest = new Bishop( "queen", ChessColor.WHITE, '♛' );
+        Queen moveTest = new Queen( "queen", ChessColor.WHITE, '♛' );
 
         assertFalse(moveTest.canMove(moveSomewhereRandom));
     }
     @Test
     public void queenMoveSomewhereRandom2(){
         Board testBoard = new Board(false);
-        Move moveSomewhereRandom = new Move(0,0,7, 0);
+        Move moveSomewhereRandom = new Move(0,0,7, 1);
 
-        Bishop moveTest = new Bishop( "queen", ChessColor.WHITE, '♛' );
+        Queen moveTest = new Queen( "queen", ChessColor.WHITE, '♛' );
 
         assertFalse(moveTest.canMove(moveSomewhereRandom));
     }
