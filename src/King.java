@@ -7,15 +7,15 @@ public class King extends Piece {
 
     @Override
     public boolean canMove(Move move) {
-        Direction[] possibilities = new Direction[] {
-          new Direction(1, 0),
-          new Direction(0, 1),
-          new Direction(-1, 1),
-          new Direction(1, -1),
-          new Direction(1, 1),
-          new Direction(-1, -1),
-          new Direction(0, -1),
-          new Direction(-1, 0)
+        Direction[] possibilities = new Direction[]{
+                new Direction(1, 0),
+                new Direction(0, 1),
+                new Direction(-1, 1),
+                new Direction(1, -1),
+                new Direction(1, 1),
+                new Direction(-1, -1),
+                new Direction(0, -1),
+                new Direction(-1, 0)
         };
 
         for (Direction possibility : possibilities) {
@@ -37,12 +37,11 @@ public class King extends Piece {
                         break;
                     }
                     return true;
-
-
+                } else {
+                    return true;
                 }
             }
         }
-
 
 
         return false;

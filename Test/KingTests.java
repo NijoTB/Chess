@@ -11,7 +11,7 @@ public class KingTests {
         Move moveUp = new Move(0,0,0, 1);
 
         King moveTest = new King( "king", ChessColor.BLACK, '♔' );
-
+        testBoard.display();
         assertTrue(moveTest.canMove(moveUp));
     }
 
