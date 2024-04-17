@@ -12,10 +12,10 @@ public class GameState {
 
     public GameState() {
         this.players = new Player[2];
-        this.players[0] = new Player();
-        this.players[1] = new Player();
+        this.players[0] = new Player(ChessColor.WHITE);
+        this.players[1] = new Player(ChessColor.BLACK);
         this.board = new Board();
-        this.currentPlayer = this.randomPlayer();
+        this.currentPlayer = this.players[0];
     }
 
 
@@ -39,5 +39,19 @@ public class GameState {
     }
 
 
+    public void playGame() {
+        board.display();
+        while (true) {
+            if (this.currentPlayer.playerColor == ChessColor.WHITE) {
+                System.out.println("Player White turn");
+            } else {
+                System.out.println("Player Black turn");
+            }
+            Move playerMove = currentPlayer.getTurn();
 
+            board.applyMove(playerMove);
+            board.display();
+            nextPlayer();
+        }
+    }
 }
