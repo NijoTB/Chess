@@ -5,27 +5,27 @@ public class Board {
     private static final int BOARD_SIZE = 8;
     public static Tile[][] board;
 
-    public Board(){
+    public Board() {
         this(true);
 
     }
 
     public Board(boolean fill) {
         this.board = new Tile[8][8];
-        for (int row = 0; row < 8; row++){
-            for (int col = 0; col < 8; col++){
+        for (int row = 0; row < 8; row++) {
+            for (int col = 0; col < 8; col++) {
                 this.board[row][col] = new Tile();
             }
         }
-        if (fill){
+        if (fill) {
             this.newBoard();
         }
     }
 
 
-    public void display(){
-        System.out.print( "      A      B      C      D      E      F      G      H \n");
-        System.out.print( "  ╔════╦════╦════╦════╦════╦════╦════╦════╗\n");
+    public void display() {
+        System.out.print("      A      B      C      D      E      F      G      H \n");
+        System.out.print("  ╔════╦════╦════╦════╦════╦════╦════╦════╗\n");
 
 
         for (int i = 0; i < board.length; i++) {
@@ -83,44 +83,43 @@ public class Board {
     }
 
 
+    public void newBoard() {
+        this.board[7][0] = new Tile(new Rook("rookQ-Black", ChessColor.BLACK, '♖'));
+        this.board[7][1] = new Tile(new Knight("knightQ-Black", ChessColor.BLACK, '♘'));
+        this.board[7][2] = new Tile(new Bishop("bishopQ-Black", ChessColor.BLACK, '♗'));
+        this.board[7][3] = new Tile(new Queen("queen-Black", ChessColor.BLACK, '♕'));
+        this.board[7][4] = new Tile(new King("king-Black", ChessColor.BLACK, '♔'));
+        this.board[7][5] = new Tile(new Bishop("bishopK-Black", ChessColor.BLACK, '♗'));
+        this.board[7][6] = new Tile(new Knight("knightK-Black", ChessColor.BLACK, '♘'));
+        this.board[7][7] = new Tile(new Rook("rookK-Black", ChessColor.BLACK, '♖'));
 
-    public void newBoard(){
-        this.board[7][0] = new Tile (new Rook("rookQ-Black", ChessColor.BLACK, '♖'));
-        this.board[7][1] = new Tile (new Knight("knightQ-Black", ChessColor.BLACK, '♘'));
-        this.board[7][2] = new Tile (new Bishop("bishopQ-Black", ChessColor.BLACK, '♗'));
-        this.board[7][3] = new Tile (new Queen("queen-Black", ChessColor.BLACK, '♕'));
-        this.board[7][4] = new Tile (new King("king-Black", ChessColor.BLACK, '♔'));
-        this.board[7][5] = new Tile (new Bishop("bishopK-Black", ChessColor.BLACK, '♗'));
-        this.board[7][6] = new Tile (new Knight("knightK-Black", ChessColor.BLACK, '♘'));
-        this.board[7][7] = new Tile (new Rook("rookK-Black", ChessColor.BLACK, '♖'));
-
-        this.board[6][0] = new Tile (new Pawn("pawnA-Black", ChessColor.BLACK, '♙'));
-        this.board[6][1] = new Tile (new Pawn("pawnB-Black", ChessColor.BLACK, '♙'));
-        this.board[6][2] = new Tile (new Pawn("pawnC-Black", ChessColor.BLACK, '♙'));
-        this.board[6][3] = new Tile (new Pawn("pawnD-Black", ChessColor.BLACK, '♙'));
-        this.board[6][4] = new Tile (new Pawn("pawnE-Black", ChessColor.BLACK, '♙'));
-        this.board[6][5] = new Tile (new Pawn("pawnF-Black", ChessColor.BLACK, '♙'));
-        this.board[6][6] = new Tile (new Pawn("pawnG-Black", ChessColor.BLACK, '♙'));
-        this.board[6][7] = new Tile (new Pawn("pawnH-Black", ChessColor.BLACK, '♙'));
+        this.board[6][0] = new Tile(new Pawn("pawnA-Black", ChessColor.BLACK, '♙'));
+        this.board[6][1] = new Tile(new Pawn("pawnB-Black", ChessColor.BLACK, '♙'));
+        this.board[6][2] = new Tile(new Pawn("pawnC-Black", ChessColor.BLACK, '♙'));
+        this.board[6][3] = new Tile(new Pawn("pawnD-Black", ChessColor.BLACK, '♙'));
+        this.board[6][4] = new Tile(new Pawn("pawnE-Black", ChessColor.BLACK, '♙'));
+        this.board[6][5] = new Tile(new Pawn("pawnF-Black", ChessColor.BLACK, '♙'));
+        this.board[6][6] = new Tile(new Pawn("pawnG-Black", ChessColor.BLACK, '♙'));
+        this.board[6][7] = new Tile(new Pawn("pawnH-Black", ChessColor.BLACK, '♙'));
 
 
-        this.board[0][0] = new Tile (new Rook("rookQ-White", ChessColor.WHITE, '♜'));
-        this.board[0][1] = new Tile (new Knight("knight-White", ChessColor.WHITE, '♞'));
-        this.board[0][2] = new Tile (new Bishop("bishopQ-White", ChessColor.WHITE, '♝'));
-        this.board[0][3] = new Tile (new Queen("queen-White", ChessColor.WHITE, '♛'));
-        this.board[0][4] = new Tile (new King("king-White", ChessColor.WHITE, '♚'));
-        this.board[0][5] = new Tile (new Bishop("bishopK-White", ChessColor.WHITE, '♝'));
-        this.board[0][6] = new Tile (new Knight("knightK-White", ChessColor.WHITE, '♞'));
-        this.board[0][7] = new Tile (new Rook("rookK-White", ChessColor.WHITE, '♜'));
+        this.board[0][0] = new Tile(new Rook("rookQ-White", ChessColor.WHITE, '♜'));
+        this.board[0][1] = new Tile(new Knight("knight-White", ChessColor.WHITE, '♞'));
+        this.board[0][2] = new Tile(new Bishop("bishopQ-White", ChessColor.WHITE, '♝'));
+        this.board[0][3] = new Tile(new Queen("queen-White", ChessColor.WHITE, '♛'));
+        this.board[0][4] = new Tile(new King("king-White", ChessColor.WHITE, '♚'));
+        this.board[0][5] = new Tile(new Bishop("bishopK-White", ChessColor.WHITE, '♝'));
+        this.board[0][6] = new Tile(new Knight("knightK-White", ChessColor.WHITE, '♞'));
+        this.board[0][7] = new Tile(new Rook("rookK-White", ChessColor.WHITE, '♜'));
 
-        this.board[1][0] = new Tile (new Pawn("pawnA-White", ChessColor.WHITE, '♟'));
-        this.board[1][1] = new Tile (new Pawn("pawnB-White", ChessColor.WHITE, '♟'));
-        this.board[1][2] = new Tile (new Pawn("pawnC-White", ChessColor.WHITE, '♟'));
-        this.board[1][3] = new Tile (new Pawn("pawnD-White", ChessColor.WHITE, '♟'));
-        this.board[1][4] = new Tile (new Pawn("pawnE-White", ChessColor.WHITE, '♟'));
-        this.board[1][5] = new Tile (new Pawn("pawnF-White", ChessColor.WHITE, '♟'));
-        this.board[1][6] = new Tile (new Pawn("pawnG-White", ChessColor.WHITE, '♟'));
-        this.board[1][7] = new Tile (new Pawn("pawnH-White", ChessColor.WHITE, '♟'));
+        this.board[1][0] = new Tile(new Pawn("pawnA-White", ChessColor.WHITE, '♟'));
+        this.board[1][1] = new Tile(new Pawn("pawnB-White", ChessColor.WHITE, '♟'));
+        this.board[1][2] = new Tile(new Pawn("pawnC-White", ChessColor.WHITE, '♟'));
+        this.board[1][3] = new Tile(new Pawn("pawnD-White", ChessColor.WHITE, '♟'));
+        this.board[1][4] = new Tile(new Pawn("pawnE-White", ChessColor.WHITE, '♟'));
+        this.board[1][5] = new Tile(new Pawn("pawnF-White", ChessColor.WHITE, '♟'));
+        this.board[1][6] = new Tile(new Pawn("pawnG-White", ChessColor.WHITE, '♟'));
+        this.board[1][7] = new Tile(new Pawn("pawnH-White", ChessColor.WHITE, '♟'));
 
 //        char kingSymbol = '\u2654';
     }
@@ -133,13 +132,34 @@ public class Board {
         number = scanner.nextInt();
 
 
-
         return null;
     }
 
 
-    public void applyMove(Move move){
+    public void applyMove(Move move) {
         board[move.nextY][move.nextX].piece = board[move.currentY][move.currentX].piece;
         board[move.currentY][move.currentX].piece = null;
+    }
+
+
+    public boolean isKingInCheck(ChessColor kingColor) {
+        int kingX;
+        int kingY;
+
+        for (int x = 0; x < 8; x++) {
+            for (int y = 0; y < 8; y++) {
+                Piece piece = Board.board[y][x].piece;
+                if (piece instanceof King && piece.color == kingColor) {
+                    kingX = x;
+                    kingY = y;
+                }
+            }
+        }
+        for (int x = 0; x < 8; x++) {
+            for (int y = 0; y < 8; y++) {
+                Piece piece = Board.board[y][x].piece;
+                if (piece.canMove(new Move(x, y, King[x, y])))
+            }
+        }
     }
 }

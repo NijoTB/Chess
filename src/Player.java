@@ -7,7 +7,7 @@ public class Player {
 
     public ChessColor playerColor;
 
-    public static final Map<String, Integer> inputMap = Map.of("a", 0, "b", 1, "c", 2, "d", 3, "e", 4, "f", 5, "g", 5, "h", 6, "i", 7);
+    public static final Map<String, Integer> inputMap = Map.of("a", 0, "b", 1, "c", 2, "d", 3, "e", 4, "f", 5, "g", 6, "h", 7);
 
     Scanner scanner = new Scanner(System.in);
 
