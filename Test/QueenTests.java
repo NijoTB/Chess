@@ -13,7 +13,7 @@ public class QueenTests {
 
         Queen moveTest = new Queen( "queen", ChessColor.WHITE, '♛' );
 
-        assertTrue(moveTest.canMove(moveUp));
+        assertTrue(moveTest.canMove(testBoard, moveUp));
     }
     @Test
     public void queenMoveUp2(){
@@ -22,7 +22,7 @@ public class QueenTests {
 
         Queen moveTest = new Queen( "queen", ChessColor.WHITE, '♛' );
 
-        assertTrue(moveTest.canMove(moveUp));
+        assertTrue(moveTest.canMove(testBoard, moveUp));
     }
 
 
@@ -35,7 +35,7 @@ public class QueenTests {
 
         Queen moveTest = new Queen( "queen", ChessColor.WHITE, '♛' );
 
-        assertTrue(moveTest.canMove(moveDown));
+        assertTrue(moveTest.canMove(testBoard, moveDown));
     }
     @Test
     public void queenMoveDown2(){
@@ -44,7 +44,7 @@ public class QueenTests {
 
         Queen moveTest = new Queen( "queen", ChessColor.WHITE, '♛' );
 
-        assertTrue(moveTest.canMove(moveDown));
+        assertTrue(moveTest.canMove(testBoard, moveDown));
     }
 
 
@@ -56,7 +56,7 @@ public class QueenTests {
 
         Queen moveTest = new Queen( "queen", ChessColor.WHITE, '♛' );
 
-        assertTrue(moveTest.canMove(moveLeft));
+        assertTrue(moveTest.canMove(testBoard, moveLeft));
     }
     @Test
     public void queenMoveLeft2(){
@@ -65,7 +65,7 @@ public class QueenTests {
 
         Queen moveTest = new Queen( "queen", ChessColor.WHITE, '♛' );
 
-        assertTrue(moveTest.canMove(moveLeft));
+        assertTrue(moveTest.canMove(testBoard, moveLeft));
     }
 
 
@@ -77,7 +77,7 @@ public class QueenTests {
 
         Queen moveTest = new Queen( "queen", ChessColor.WHITE, '♛' );
 
-        assertTrue(moveTest.canMove(moveRight));
+        assertTrue(moveTest.canMove(testBoard, moveRight));
     }
     @Test
     public void queenMoveRight2(){
@@ -86,7 +86,7 @@ public class QueenTests {
 
         Queen moveTest = new Queen( "queen", ChessColor.WHITE, '♛' );
 
-        assertTrue(moveTest.canMove(moveRight));
+        assertTrue(moveTest.canMove(testBoard, moveRight));
     }
 
 
@@ -98,7 +98,7 @@ public class QueenTests {
 
         Queen moveTest = new Queen( "queen", ChessColor.WHITE, '♛' );
 
-        assertTrue(moveTest.canMove(moveBottomRight));
+        assertTrue(moveTest.canMove(testBoard, moveBottomRight));
     }
     @Test
     public void queenMoveBottomRight2(){
@@ -107,7 +107,7 @@ public class QueenTests {
 
         Queen moveTest = new Queen( "queen", ChessColor.WHITE, '♛' );
 
-        assertTrue(moveTest.canMove(moveBottomRight));
+        assertTrue(moveTest.canMove(testBoard, moveBottomRight));
     }
 
 
@@ -119,7 +119,7 @@ public class QueenTests {
 
         Queen moveTest = new Queen( "queen", ChessColor.WHITE, '♛' );
 
-        assertTrue(moveTest.canMove(moveBottomLeft));
+        assertTrue(moveTest.canMove(testBoard, moveBottomLeft));
     }
     @Test
     public void queenMoveBottomLeft2(){
@@ -128,7 +128,7 @@ public class QueenTests {
 
         Queen moveTest = new Queen( "queen", ChessColor.WHITE, '♛' );
 
-        assertTrue(moveTest.canMove(moveBottomLeft));
+        assertTrue(moveTest.canMove(testBoard, moveBottomLeft));
     }
 
 
@@ -140,7 +140,7 @@ public class QueenTests {
 
         Queen moveTest = new Queen( "queen", ChessColor.WHITE, '♛' );
 
-        assertTrue(moveTest.canMove(moveTopRight));
+        assertTrue(moveTest.canMove(testBoard, moveTopRight));
     }
     @Test
     public void queenMoveTopRight2(){
@@ -149,7 +149,7 @@ public class QueenTests {
 
         Queen moveTest = new Queen( "queen", ChessColor.WHITE, '♛' );
 
-        assertTrue(moveTest.canMove(moveTopRight));
+        assertTrue(moveTest.canMove(testBoard, moveTopRight));
     }
 
 
@@ -161,7 +161,7 @@ public class QueenTests {
 
         Queen moveTest = new Queen( "queen", ChessColor.WHITE, '♛' );
 
-        assertTrue(moveTest.canMove(moveTopLeft));
+        assertTrue(moveTest.canMove(testBoard, moveTopLeft));
     }
     @Test
     public void queenMoveTopLeft2(){
@@ -170,7 +170,7 @@ public class QueenTests {
 
         Queen moveTest = new Queen( "queen", ChessColor.WHITE, '♛' );
 
-        assertTrue(moveTest.canMove(moveTopLeft));
+        assertTrue(moveTest.canMove(testBoard, moveTopLeft));
     }
 
 
@@ -182,7 +182,7 @@ public class QueenTests {
 
         Queen moveTest = new Queen( "queen", ChessColor.WHITE, '♛' );
 
-        assertFalse(moveTest.canMove(moveSomewhereRandom));
+        assertFalse(moveTest.canMove(testBoard, moveSomewhereRandom));
     }
     @Test
     public void queenMoveSomewhereRandom2(){
@@ -191,6 +191,6 @@ public class QueenTests {
 
         Queen moveTest = new Queen( "queen", ChessColor.WHITE, '♛' );
 
-        assertFalse(moveTest.canMove(moveSomewhereRandom));
+        assertFalse(moveTest.canMove(testBoard, moveSomewhereRandom));
     }
 }

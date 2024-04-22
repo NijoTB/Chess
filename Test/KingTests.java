@@ -12,7 +12,7 @@ public class KingTests {
 
         King moveTest = new King( "king", ChessColor.BLACK, '♔' );
         testBoard.display();
-        assertTrue(moveTest.canMove(moveUp));
+        assertTrue(moveTest.canMove(testBoard, moveUp));
     }
 
 
@@ -23,7 +23,7 @@ public class KingTests {
 
         King moveTest = new King( "king", ChessColor.BLACK, '♔' );
 
-        assertTrue(moveTest.canMove(moveUp));
+        assertTrue(moveTest.canMove(testBoard, moveUp));
     }
 
 
@@ -34,7 +34,7 @@ public class KingTests {
 
         King moveTest = new King( "king", ChessColor.BLACK, '♔' );
 
-        assertTrue(moveTest.canMove(moveUp));
+        assertTrue(moveTest.canMove(testBoard, moveUp));
     }
 
 
@@ -45,7 +45,7 @@ public class KingTests {
 
         King moveTest = new King( "king", ChessColor.BLACK, '♔' );
 
-        assertTrue(moveTest.canMove(moveUp));
+        assertTrue(moveTest.canMove(testBoard, moveUp));
     }
 
 
@@ -56,7 +56,7 @@ public class KingTests {
 
         King moveTest = new King( "king", ChessColor.BLACK, '♔' );
 
-        assertTrue(moveTest.canMove(moveUp));
+        assertTrue(moveTest.canMove(testBoard, moveUp));
     }
 
 
@@ -67,7 +67,7 @@ public class KingTests {
 
         King moveTest = new King( "king", ChessColor.BLACK, '♔' );
 
-        assertTrue(moveTest.canMove(moveUp));
+        assertTrue(moveTest.canMove(testBoard, moveUp));
     }
 
 
@@ -78,7 +78,7 @@ public class KingTests {
 
         King moveTest = new King( "king", ChessColor.BLACK, '♔' );
 
-        assertTrue(moveTest.canMove(moveUp));
+        assertTrue(moveTest.canMove(testBoard, moveUp));
     }
 
 
@@ -89,7 +89,7 @@ public class KingTests {
 
         King moveTest = new King( "king", ChessColor.BLACK, '♔' );
 
-        assertTrue(moveTest.canMove(moveUp));
+        assertTrue(moveTest.canMove(testBoard, moveUp));
     }
 
 
@@ -101,6 +101,6 @@ public class KingTests {
 
         King moveTest = new King( "king", ChessColor.BLACK, '♔' );
 
-        assertFalse(moveTest.canMove(moveUp));
+        assertFalse(moveTest.canMove(testBoard, moveUp));
     }
 }

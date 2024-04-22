@@ -14,7 +14,7 @@ public class BishopTests {
 
         Bishop moveTest = new Bishop( "bishop", ChessColor.WHITE, '♝' );
 
-        assertTrue(moveTest.canMove(moveBottomRight));
+        assertTrue(moveTest.canMove(testBoard, moveBottomRight));
     }
     @Test
     public void bishopMoveBottomRight2(){
@@ -23,7 +23,7 @@ public class BishopTests {
 
         Bishop moveTest = new Bishop( "bishop", ChessColor.WHITE, '♝' );
 
-        assertTrue(moveTest.canMove(moveBottomRight));
+        assertTrue(moveTest.canMove(testBoard, moveBottomRight));
     }
 
 
@@ -35,7 +35,7 @@ public class BishopTests {
 
         Bishop moveTest = new Bishop( "bishop", ChessColor.WHITE, '♝' );
 
-        assertTrue(moveTest.canMove(moveBottomLeft));
+        assertTrue(moveTest.canMove(testBoard, moveBottomLeft));
     }
     @Test
     public void bishopMoveBottomLeft2(){
@@ -44,7 +44,7 @@ public class BishopTests {
 
         Bishop moveTest = new Bishop( "bishop", ChessColor.WHITE, '♝' );
 
-        assertTrue(moveTest.canMove(moveBottomLeft));
+        assertTrue(moveTest.canMove(testBoard, moveBottomLeft));
     }
 
 
@@ -56,7 +56,7 @@ public class BishopTests {
 
         Bishop moveTest = new Bishop( "bishop", ChessColor.WHITE, '♝' );
 
-        assertTrue(moveTest.canMove(moveTopRight));
+        assertTrue(moveTest.canMove(testBoard, moveTopRight));
     }
     @Test
     public void bishopMoveTopRight2(){
@@ -65,7 +65,7 @@ public class BishopTests {
 
         Bishop moveTest = new Bishop( "bishop", ChessColor.WHITE, '♝' );
 
-        assertTrue(moveTest.canMove(moveTopRight));
+        assertTrue(moveTest.canMove(testBoard, moveTopRight));
     }
 
 
@@ -77,7 +77,7 @@ public class BishopTests {
 
         Bishop moveTest = new Bishop( "bishop", ChessColor.WHITE, '♝' );
 
-        assertTrue(moveTest.canMove(moveTopLeft));
+        assertTrue(moveTest.canMove(testBoard, moveTopLeft));
     }
     @Test
     public void bishopMoveTopLeft2(){
@@ -86,7 +86,7 @@ public class BishopTests {
 
         Bishop moveTest = new Bishop( "bishop", ChessColor.WHITE, '♝' );
 
-        assertTrue(moveTest.canMove(moveTopLeft));
+        assertTrue(moveTest.canMove(testBoard, moveTopLeft));
     }
 
 
@@ -98,7 +98,7 @@ public class BishopTests {
 
         Bishop moveTest = new Bishop( "bishop", ChessColor.WHITE, '♝' );
 
-        assertFalse(moveTest.canMove(moveSomewhereRandom));
+        assertFalse(moveTest.canMove(testBoard, moveSomewhereRandom));
     }
     @Test
     public void bishopMoveSomewhereRandom2(){
@@ -107,7 +107,7 @@ public class BishopTests {
 
         Bishop moveTest = new Bishop( "bishop", ChessColor.WHITE, '♝' );
 
-        assertFalse(moveTest.canMove(moveSomewhereRandom));
+        assertFalse(moveTest.canMove(testBoard, moveSomewhereRandom));
     }
 }
 

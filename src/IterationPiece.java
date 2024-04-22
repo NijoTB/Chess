@@ -8,7 +8,7 @@ public abstract class IterationPiece extends Piece {
     }
 
     @Override
-    public boolean canMove(Move move) {
+    public boolean canMove(Board board, Move move) {
         for (Direction direction : moveSet) {
             int pointerX = move.currentX;
             int pointerY = move.currentY;
@@ -22,7 +22,7 @@ public abstract class IterationPiece extends Piece {
                 boolean Check2 = pointerY >= 0 && pointerY <= 7;
                 if (!(Check1 && Check2)) {
                     break;
-                }                Tile pieceChecker1 = Board.board[pointerY][pointerX];
+                }                Tile pieceChecker1 = board.board[pointerY][pointerX];
                 boolean Check3 = pieceChecker1.piece == null;
                 if (!(Check3)) {
                     ChessColor pointerPiece = pieceChecker1.piece.color;

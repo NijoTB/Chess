@@ -1,13 +1,21 @@
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Board {
 
     private static final int BOARD_SIZE = 8;
-    public static Tile[][] board;
+    public Tile[][] board;
 
     public Board() {
         this(true);
 
+    }
+
+    public Board(Tile[][] newBoard) {
+        board = newBoard;
+        for (int row = 0; row < 8; row++) {
+            System.arraycopy(newBoard[row], 0, this.board[row], 0, 8);
+        }
     }
 
     public Board(boolean fill) {
@@ -125,14 +133,11 @@ public class Board {
     }
 
 
-    public Move getTurn() {
-        int number;
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("Player1, where would you like to play your move?");
-        number = scanner.nextInt();
 
 
-        return null;
+
+    public void addPiece(Piece piece, int x, int y) {
+        this.board[y][x].piece = piece;
     }
 
 
@@ -143,23 +148,69 @@ public class Board {
 
 
     public boolean isKingInCheck(ChessColor kingColor) {
-        int kingX;
-        int kingY;
+        int kingX = -1;
+        int kingY = -1;
 
         for (int x = 0; x < 8; x++) {
             for (int y = 0; y < 8; y++) {
-                Piece piece = Board.board[y][x].piece;
+                Piece piece = this.board[y][x].piece;
                 if (piece instanceof King && piece.color == kingColor) {
                     kingX = x;
                     kingY = y;
                 }
             }
         }
+
+        if (kingX == -1 && kingY == -1) {
+            return false;
+        }
+
         for (int x = 0; x < 8; x++) {
             for (int y = 0; y < 8; y++) {
-                Piece piece = Board.board[y][x].piece;
-                if (piece.canMove(new Move(x, y, King[x, y])))
+                Piece piece = this.board[y][x].piece;
+                if (piece == null) {
+                    continue;
+                }
+                if (piece.canMove(this, new Move(x, y, kingX, kingY))) {
+                    return true;
+                }
             }
         }
+        return false;
+    }
+
+    // makes a clone board and does a move on it
+    public Board virtualBoard(Move move) {
+        Board board = new Board(this.board);
+        board.applyMove(move);
+        return board;
+    }
+
+
+    public boolean checkmate(ChessColor color) {
+        if (!isKingInCheck(color)) {
+            return false;
+        }
+        for (int i = 0; i < 8; i++) {
+            for (int j = 0; j < 8; j++) {
+                Piece targetPiece = board[j][i].piece;
+                if (targetPiece == null) {
+                    continue;
+                }
+                if (color != targetPiece.color) {
+                    continue;
+                }
+
+                ArrayList<Move> possibleMoves = targetPiece.getAllValidMoves(this, i, j);
+
+                for (Move move : possibleMoves) {
+                    Board boardClone = virtualBoard(move);
+                    if (!boardClone.isKingInCheck(color)) {
+                        return false;
+                    }
+                }
+            }
+        }
+        return true;
     }
 }

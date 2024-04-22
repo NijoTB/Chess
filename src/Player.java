@@ -21,7 +21,7 @@ public class Player {
     }
 
 
-    public boolean validInput(String input) {
+    public boolean validInput(Board board, String input) {
         if (input.length() != 5) {
             return false;
         }
@@ -51,14 +51,14 @@ public class Player {
 
         Move validMove = getMove(input);
 
-        Piece validMoveTest = Board.board[validMove.currentY][validMove.currentX].piece;
+        Piece validMoveTest = board.board[validMove.currentY][validMove.currentX].piece;
         if (validMoveTest == null) {
             return false;
         }
         if (validMoveTest.color != this.playerColor) {
             return false;
         }
-        return validMoveTest.canMove(validMove);
+        return validMoveTest.canMove(board, validMove);
     }
 
 
@@ -77,12 +77,12 @@ public class Player {
     }
 
 
-    public Move getTurn() {
+    public Move getTurn(Board board) {
         String playerMove = "";
 
         Scanner scanner = new Scanner(System.in);
 
-        while (!validInput(playerMove)) {
+        while (!validInput(board, playerMove)) {
             System.out.println("Type a move");
             playerMove = scanner.nextLine();
         }

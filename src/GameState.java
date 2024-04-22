@@ -2,6 +2,7 @@ import javax.xml.namespace.QName;
 import java.util.Arrays;
 import java.util.Optional;
 import java.util.Random;
+import java.util.Scanner;
 
 public class GameState {
 
@@ -47,13 +48,17 @@ public class GameState {
             } else {
                 System.out.println("Player Black turn");
             }
-            Move playerMove = currentPlayer.getTurn();
+            Move playerMove = currentPlayer.getTurn(board);
 
             board.applyMove(playerMove);
             board.display();
+            if (board.checkmate(currentPlayer.playerColor)) {
+                System.out.println("CHECK MATE");
+            }
             nextPlayer();
         }
     }
+
 
 
 }

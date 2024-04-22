@@ -14,7 +14,7 @@ public class RookTests {
 
         Rook moveTest = new Rook( "rook", ChessColor.BLACK, '♖' );
 
-        assertTrue(moveTest.canMove(moveUp));
+        assertTrue(moveTest.canMove(testBoard, moveUp));
     }
     @Test
     public void rookMoveUp2(){
@@ -23,7 +23,7 @@ public class RookTests {
 
         Rook moveTest = new Rook( "rook", ChessColor.BLACK, '♖' );
 
-        assertTrue(moveTest.canMove(moveUp));
+        assertTrue(moveTest.canMove(testBoard, moveUp));
     }
 
 
@@ -36,7 +36,7 @@ public class RookTests {
 
         Rook moveTest = new Rook( "rook", ChessColor.WHITE, '♖' );
 
-        assertTrue(moveTest.canMove(moveDown));
+        assertTrue(moveTest.canMove(testBoard, moveDown));
     }
     @Test
     public void rookMoveDown2(){
@@ -45,7 +45,7 @@ public class RookTests {
 
         Rook moveTest = new Rook( "rook", ChessColor.BLACK, '♖' );
 
-        assertTrue(moveTest.canMove(moveDown));
+        assertTrue(moveTest.canMove(testBoard, moveDown));
     }
 
 
@@ -57,7 +57,7 @@ public class RookTests {
 
         Rook moveTest = new Rook( "rook", ChessColor.BLACK, '♖' );
 
-        assertTrue(moveTest.canMove(moveLeft));
+        assertTrue(moveTest.canMove(testBoard, moveLeft));
     }
     @Test
     public void rookMoveLeft2(){
@@ -66,7 +66,7 @@ public class RookTests {
 
         Rook moveTest = new Rook( "rook", ChessColor.BLACK, '♖' );
 
-        assertTrue(moveTest.canMove(moveLeft));
+        assertTrue(moveTest.canMove(testBoard, moveLeft));
     }
 
 
@@ -78,7 +78,7 @@ public class RookTests {
 
         Rook moveTest = new Rook( "rook", ChessColor.BLACK, '♖' );
 
-        assertTrue(moveTest.canMove(moveRight));
+        assertTrue(moveTest.canMove(testBoard, moveRight));
     }
     @Test
     public void rookMoveRight2(){
@@ -87,7 +87,7 @@ public class RookTests {
 
         Rook moveTest = new Rook( "rook", ChessColor.BLACK, '♖' );
 
-        assertTrue(moveTest.canMove(moveRight));
+        assertTrue(moveTest.canMove(testBoard, moveRight));
     }
 
 
@@ -99,7 +99,7 @@ public class RookTests {
 
         Rook moveTest = new Rook( "rook", ChessColor.BLACK, '♖' );
 
-        assertFalse(moveTest.canMove(moveDiagonal));
+        assertFalse(moveTest.canMove(testBoard, moveDiagonal));
     }
     @Test
     public void cantGoDiagonal2(){
@@ -108,7 +108,7 @@ public class RookTests {
 
         Rook moveTest = new Rook( "rook", ChessColor.BLACK, '♖' );
 
-        assertFalse(moveTest.canMove(moveDiagonal));
+        assertFalse(moveTest.canMove(testBoard, moveDiagonal));
     }
     @Test
     public void cantGoDiagonal3(){
@@ -117,7 +117,7 @@ public class RookTests {
 
         Rook moveTest = new Rook( "rook", ChessColor.BLACK, '♖' );
 
-        assertFalse(moveTest.canMove(moveDiagonal));
+        assertFalse(moveTest.canMove(testBoard, moveDiagonal));
     }
     @Test
     public void cantGoDiagonal4(){
@@ -126,6 +126,6 @@ public class RookTests {
 
         Rook moveTest = new Rook( "rook", ChessColor.BLACK, '♖' );
 
-        assertFalse(moveTest.canMove(moveDiagonal));
+        assertFalse(moveTest.canMove(testBoard, moveDiagonal));
     }
 }

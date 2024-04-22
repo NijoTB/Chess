@@ -1,12 +1,17 @@
 import java.util.TreeMap;
 
 public class King extends Piece {
+    public King(String id, ChessColor color) {
+        super(id, color, color == ChessColor.WHITE  ? '♚': '♔');
+    }
     public King(String id, ChessColor color, char symbol) {
         super(id, color, symbol);
     }
 
+
+
     @Override
-    public boolean canMove(Move move) {
+    public boolean canMove(Board board, Move move) {
         Direction[] possibilities = new Direction[]{
                 new Direction(1, 0),
                 new Direction(0, 1),
@@ -29,7 +34,7 @@ public class King extends Piece {
                 if (!(Check1 && Check2)) {
                     continue;
                 }
-                Tile pieceChecker1 = Board.board[y][x];
+                Tile pieceChecker1 = board.board[y][x];
                 boolean Check3 = pieceChecker1.piece == null;
                 if (!(Check3)) {
                     ChessColor pointerPiece = pieceChecker1.piece.color;

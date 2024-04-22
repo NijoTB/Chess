@@ -12,7 +12,7 @@ public class KnightTests {
 
         Knight moveTest = new Knight( "knight", ChessColor.WHITE, '♞' );
         testBoard.display();
-        assertTrue(moveTest.canMove(moveUp));
+        assertTrue(moveTest.canMove(testBoard, moveUp));
     }
 
 
@@ -23,7 +23,7 @@ public class KnightTests {
 
         Knight moveTest = new Knight( "knight", ChessColor.WHITE, '♞' );
         testBoard.display();
-        assertTrue(moveTest.canMove(moveUp));
+        assertTrue(moveTest.canMove(testBoard, moveUp));
     }
 
 
@@ -34,7 +34,7 @@ public class KnightTests {
 
         Knight moveTest = new Knight( "knight", ChessColor.WHITE, '♞' );
         testBoard.display();
-        assertTrue(moveTest.canMove(moveUp));
+        assertTrue(moveTest.canMove(testBoard, moveUp));
     }
 
 
@@ -45,7 +45,7 @@ public class KnightTests {
 
         Knight moveTest = new Knight( "knight", ChessColor.WHITE, '♞' );
         testBoard.display();
-        assertTrue(moveTest.canMove(moveUp));
+        assertTrue(moveTest.canMove(testBoard, moveUp));
     }
 
 
@@ -56,7 +56,7 @@ public class KnightTests {
 
         Knight moveTest = new Knight( "knight", ChessColor.WHITE, '♞' );
         testBoard.display();
-        assertTrue(moveTest.canMove(moveUp));
+        assertTrue(moveTest.canMove(testBoard, moveUp));
     }
 
 
@@ -67,7 +67,7 @@ public class KnightTests {
 
         Knight moveTest = new Knight( "knight", ChessColor.WHITE, '♞' );
         testBoard.display();
-        assertTrue(moveTest.canMove(moveUp));
+        assertTrue(moveTest.canMove(testBoard, moveUp));
     }
 
 
@@ -78,7 +78,7 @@ public class KnightTests {
 
         Knight moveTest = new Knight( "knight", ChessColor.WHITE, '♞' );
         testBoard.display();
-        assertTrue(moveTest.canMove(moveUp));
+        assertTrue(moveTest.canMove(testBoard, moveUp));
     }
 
 
@@ -89,6 +89,6 @@ public class KnightTests {
 
         Knight moveTest = new Knight( "knight", ChessColor.WHITE, '♞' );
         testBoard.display();
-        assertTrue(moveTest.canMove(moveUp));
+        assertTrue(moveTest.canMove(testBoard, moveUp));
     }
 }

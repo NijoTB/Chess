@@ -12,7 +12,7 @@ public class PawnTests {
 
         Pawn moveTest = new Pawn( "pawn", ChessColor.BLACK, '♙' );
         testBoard.display();
-        assertTrue(moveTest.canMove(moveUp));
+        assertTrue(moveTest.canMove(testBoard, moveUp));
     }
     @Test
     public void pawnMoveUp2(){
@@ -21,7 +21,7 @@ public class PawnTests {
 
         Pawn moveTest = new Pawn( "pawn", ChessColor.BLACK, '♙' );
         testBoard.display();
-        assertTrue(moveTest.canMove(moveUp));
+        assertTrue(moveTest.canMove(testBoard, moveUp));
     }
 
 
@@ -34,7 +34,7 @@ public class PawnTests {
 
         Pawn moveTest = new Pawn( "pawn", ChessColor.BLACK, '♙' );
         testBoard.display();
-        assertFalse(moveTest.canMove(moveUp));
+        assertFalse(moveTest.canMove(testBoard, moveUp));
     }
     @Test
     public void pawnMoveRight(){
@@ -43,7 +43,7 @@ public class PawnTests {
 
         Pawn moveTest = new Pawn( "pawn", ChessColor.BLACK, '♙' );
         testBoard.display();
-        assertFalse(moveTest.canMove(moveUp));
+        assertFalse(moveTest.canMove(testBoard, moveUp));
     }
 
 
@@ -55,7 +55,7 @@ public class PawnTests {
 
         Pawn moveTest = new Pawn( "pawn", ChessColor.BLACK, '♙' );
         testBoard.display();
-        assertFalse(moveTest.canMove(moveUp));
+        assertFalse(moveTest.canMove(testBoard, moveUp));
     }
 
 
@@ -67,7 +67,7 @@ public class PawnTests {
 
         Pawn moveTest = new Pawn( "pawn", ChessColor.BLACK, '♙' );
         testBoard.display();
-        assertFalse(moveTest.canMove(moveUp));
+        assertFalse(moveTest.canMove(testBoard, moveUp));
     }
     @Test
     public void pawnMoveTopRight(){
@@ -76,7 +76,7 @@ public class PawnTests {
 
         Pawn moveTest = new Pawn( "pawn", ChessColor.BLACK, '♙' );
         testBoard.display();
-        assertFalse(moveTest.canMove(moveUp));
+        assertFalse(moveTest.canMove(testBoard, moveUp));
     }
     @Test
     public void pawnMoveBottomLeft(){
@@ -85,7 +85,7 @@ public class PawnTests {
 
         Pawn moveTest = new Pawn( "pawn", ChessColor.BLACK, '♙' );
         testBoard.display();
-        assertFalse(moveTest.canMove(moveUp));
+        assertFalse(moveTest.canMove(testBoard, moveUp));
     }
     @Test
     public void pawnMoveBottomRight(){
@@ -94,7 +94,7 @@ public class PawnTests {
 
         Pawn moveTest = new Pawn( "pawn", ChessColor.BLACK, '♙' );
         testBoard.display();
-        assertFalse(moveTest.canMove(moveUp));
+        assertFalse(moveTest.canMove(testBoard, moveUp));
     }
 
 
@@ -106,6 +106,6 @@ public class PawnTests {
 
         Pawn moveTest = new Pawn( "pawn", ChessColor.BLACK, '♙' );
         testBoard.display();
-        assertFalse(moveTest.canMove(moveUp));
+        assertFalse(moveTest.canMove(testBoard, moveUp));
     }
 }
