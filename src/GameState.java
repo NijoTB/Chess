@@ -52,10 +52,10 @@ public class GameState {
 
             board.applyMove(playerMove);
             board.display();
+            nextPlayer();
             if (board.checkmate(currentPlayer.playerColor)) {
                 System.out.println("CHECK MATE");
             }
-            nextPlayer();
         }
     }
 
