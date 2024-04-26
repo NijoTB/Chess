@@ -11,4 +11,8 @@ public class Move {
         this.nextX = nextX;
         this.nextY = nextY;
     }
+
+    public String toString() {
+        return "start: " + currentX + "|" + currentY + "  end: " + nextX + "|" + nextY;
+    }
 }

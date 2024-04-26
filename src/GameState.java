@@ -52,13 +52,11 @@ public class GameState {
 
             board.applyMove(playerMove);
             board.display();
-            nextPlayer();
-            if (board.checkmate(currentPlayer.playerColor)) {
-                System.out.println("CHECK MATE");
+            if (board.checkmate(currentPlayer.playerColor == ChessColor.WHITE ? ChessColor.BLACK : ChessColor.WHITE)) {
+                System.out.println("CHECK MATE" + currentPlayer + "WINS!!!");
+                break;
             }
+            nextPlayer();
         }
     }
-
-
-
 }

@@ -12,9 +12,11 @@ public class Board {
     }
 
     public Board(Tile[][] newBoard) {
-        board = newBoard;
+        this.board = new Tile[8][8];
         for (int row = 0; row < 8; row++) {
-            System.arraycopy(newBoard[row], 0, this.board[row], 0, 8);
+            for (int col = 0; col < 8; col++) {
+                this.board[row][col] = new Tile(newBoard[row][col].piece);
+            }
         }
     }
 
@@ -181,9 +183,9 @@ public class Board {
 
     // makes a clone board and does a move on it
     public Board virtualBoard(Move move) {
-        Board board = new Board(this.board);
-        board.applyMove(move);
-        return board;
+        Board newBoard = new Board(this.board);
+        newBoard.applyMove(move);
+        return newBoard;
     }
 
 

@@ -39,7 +39,7 @@ public class King extends Piece {
                 if (!(Check3)) {
                     ChessColor pointerPiece = pieceChecker1.piece.color;
                     if (this.color == pointerPiece) {
-                        break;
+                        return false;
                     }
                     return true;
                 } else {
