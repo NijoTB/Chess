@@ -2,6 +2,8 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
+import java.io.File;
+
 public class screen {
 
 
@@ -11,7 +13,12 @@ public class screen {
         private JLabel[][] boardLabels;
         private ImageIcon[][] pieceIcons;
 
+
+        private static final ImageIcon BLACKPAWN =  new ImageIcon(new ImageIcon("resources/PawnBlackChessPiece.png").getImage().getScaledInstance((int) ((double) SQUARE_SIZE * 0.5), (int) ((double) SQUARE_SIZE * 0.75), Image.SCALE_SMOOTH));
+        private static final ImageIcon WHITEPAWN =  new ImageIcon(new ImageIcon("resources/PawnWhiteChessPiecePNG.png").getImage().getScaledInstance((int) ((double) SQUARE_SIZE * 0.5), (int) ((double) SQUARE_SIZE * 0.75), Image.SCALE_SMOOTH));
+
         public ChessGUI() {
+            System.out.println("here");
             setTitle("Chess Board");
             setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
             setSize(BOARD_SIZE * SQUARE_SIZE, BOARD_SIZE * SQUARE_SIZE);
@@ -23,6 +30,8 @@ public class screen {
 
             boardLabels = new JLabel[BOARD_SIZE][BOARD_SIZE];
             pieceIcons = new ImageIcon[BOARD_SIZE][BOARD_SIZE];
+            // Initialize the board with piece icons
+
 
             // Populate the chessboard with squares and piece icons
             for (int row = 0; row < BOARD_SIZE; row++) {
@@ -37,14 +46,18 @@ public class screen {
                         square.setBackground(Color.DARK_GRAY);
                     }
 
-                    boardLabels[row][col] = new JLabel();
+                    if (pieceIcons[row][col] != null) {
+                        boardLabels[row][col] = new JLabel(pieceIcons[row][col]);
+                    }else{
+                        boardLabels[row][col] = new JLabel();
+                    }
+
                     square.add(boardLabels[row][col], BorderLayout.CENTER);
                     chessPanel.add(square);
                 }
             }
 
-            // Initialize the board with piece icons
-            initializeBoard();
+
 
             // Add mouse listener for interaction
             addMouseListener(new MouseAdapter() {
@@ -77,16 +90,6 @@ public class screen {
             setVisible(true);
         }
 
-        private void initializeBoard() {
-            // Initialize the board with piece icons
-            // For simplicity, let's add only one type of piece (black pawns) for demonstration
-            for (int col = 0; col < BOARD_SIZE; col++) {
-                pieceIcons[1][col] = new ImageIcon("");
-            }
-
-            // Update GUI with piece icons
-            updateBoardGUI();
-        }
 
         private void movePiece(int fromRow, int fromCol, int toRow, int toCol) {
             // Perform move logic here (not implemented in this example)
@@ -102,6 +105,21 @@ public class screen {
                 for (int col = 0; col < BOARD_SIZE; col++) {
                     if (pieceIcons[row][col] != null) {
                         boardLabels[row][col].setIcon(pieceIcons[row][col]);
+                    } else {
+                        boardLabels[row][col].setIcon(null);
+                    }
+                }
+            }
+        }
+        public void updateBoardGUI(Board board) {
+            // Update GUI with piece icons
+            for (int row = 0; row < BOARD_SIZE; row++) {
+                for (int col = 0; col < BOARD_SIZE; col++) {
+                    Piece boardPiece = board.board[row][col].piece;
+                    if (boardPiece != null) {
+                        if (boardPiece instanceof Pawn && boardPiece.color == ChessColor.WHITE) {
+                            boardLabels[row][col].setIcon(WHITEPAWN);
+                        }
                     } else {
                         boardLabels[row][col].setIcon(null);
                     }
