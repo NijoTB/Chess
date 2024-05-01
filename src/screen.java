@@ -16,6 +16,22 @@ public class screen {
 
         private static final ImageIcon BLACKPAWN =  new ImageIcon(new ImageIcon("resources/PawnBlackChessPiece.png").getImage().getScaledInstance((int) ((double) SQUARE_SIZE * 0.5), (int) ((double) SQUARE_SIZE * 0.75), Image.SCALE_SMOOTH));
         private static final ImageIcon WHITEPAWN =  new ImageIcon(new ImageIcon("resources/PawnWhiteChessPiecePNG.png").getImage().getScaledInstance((int) ((double) SQUARE_SIZE * 0.5), (int) ((double) SQUARE_SIZE * 0.75), Image.SCALE_SMOOTH));
+        private static final ImageIcon BLACKROOK =  new ImageIcon(new ImageIcon("resources/RookBlackChessPiece.png").getImage().getScaledInstance((int) ((double) SQUARE_SIZE * 0.5), (int) ((double) SQUARE_SIZE * 0.75), Image.SCALE_SMOOTH));
+        private static final ImageIcon WHITEROOK =  new ImageIcon(new ImageIcon("resources/RookWhiteChessPiece.png").getImage().getScaledInstance((int) ((double) SQUARE_SIZE * 0.5), (int) ((double) SQUARE_SIZE * 0.75), Image.SCALE_SMOOTH));
+        private static final ImageIcon BLACKBISHOP =  new ImageIcon(new ImageIcon("resources/BishopBlackChessPiece.png").getImage().getScaledInstance((int) ((double) SQUARE_SIZE * 0.5), (int) ((double) SQUARE_SIZE * 0.75), Image.SCALE_SMOOTH));
+        private static final ImageIcon WHITEBISHOP =  new ImageIcon(new ImageIcon("resources/BishopWhiteChessPiece.png").getImage().getScaledInstance((int) ((double) SQUARE_SIZE * 0.5), (int) ((double) SQUARE_SIZE * 0.75), Image.SCALE_SMOOTH));
+        private static final ImageIcon BLACKKNIGHT =  new ImageIcon(new ImageIcon("resources/KnightBlackChessPiece.png").getImage().getScaledInstance((int) ((double) SQUARE_SIZE * 0.5), (int) ((double) SQUARE_SIZE * 0.75), Image.SCALE_SMOOTH));
+        private static final ImageIcon WHITEKNIGHT =  new ImageIcon(new ImageIcon("resources/KnightWhiteChessPiece.png").getImage().getScaledInstance((int) ((double) SQUARE_SIZE * 0.5), (int) ((double) SQUARE_SIZE * 0.75), Image.SCALE_SMOOTH));
+        private static final ImageIcon BLACKKING =  new ImageIcon(new ImageIcon("resources/KingBlackChessPiece.png").getImage().getScaledInstance((int) ((double) SQUARE_SIZE * 0.5), (int) ((double) SQUARE_SIZE * 0.75), Image.SCALE_SMOOTH));
+        private static final ImageIcon WHITEKING =  new ImageIcon(new ImageIcon("resources/KingWhiteChessPiece.png").getImage().getScaledInstance((int) ((double) SQUARE_SIZE * 0.5), (int) ((double) SQUARE_SIZE * 0.75), Image.SCALE_SMOOTH));
+        private static final ImageIcon BLACKQUEEN =  new ImageIcon(new ImageIcon("resources/QueenBlackChessPiece.png").getImage().getScaledInstance((int) ((double) SQUARE_SIZE * 0.5), (int) ((double) SQUARE_SIZE * 0.75), Image.SCALE_SMOOTH));
+        private static final ImageIcon WHITEQUEEN =  new ImageIcon(new ImageIcon("resources/QueenWhiteChessPiece.png").getImage().getScaledInstance((int) ((double) SQUARE_SIZE * 0.5), (int) ((double) SQUARE_SIZE * 0.75), Image.SCALE_SMOOTH));
+
+
+
+
+
+
 
         public ChessGUI() {
             System.out.println("here");
@@ -119,6 +135,39 @@ public class screen {
                     if (boardPiece != null) {
                         if (boardPiece instanceof Pawn && boardPiece.color == ChessColor.WHITE) {
                             boardLabels[row][col].setIcon(WHITEPAWN);
+                        }
+                        if (boardPiece instanceof Pawn && boardPiece.color == ChessColor.BLACK) {
+                            boardLabels[row][col].setIcon(BLACKPAWN);
+                        }
+                        if (boardPiece instanceof Rook && boardPiece.color == ChessColor.WHITE) {
+                            boardLabels[row][col].setIcon(WHITEROOK);
+                        }
+                        if (boardPiece instanceof Rook && boardPiece.color == ChessColor.BLACK) {
+                            boardLabels[row][col].setIcon(BLACKROOK);
+                        }
+                        if (boardPiece instanceof Bishop && boardPiece.color == ChessColor.WHITE) {
+                            boardLabels[row][col].setIcon(WHITEBISHOP);
+                        }
+                        if (boardPiece instanceof Bishop && boardPiece.color == ChessColor.BLACK) {
+                            boardLabels[row][col].setIcon(BLACKBISHOP);
+                        }
+                        if (boardPiece instanceof Knight && boardPiece.color == ChessColor.WHITE) {
+                            boardLabels[row][col].setIcon(WHITEKNIGHT);
+                        }
+                        if (boardPiece instanceof Knight && boardPiece.color == ChessColor.BLACK) {
+                            boardLabels[row][col].setIcon(BLACKKNIGHT);
+                        }
+                        if (boardPiece instanceof King && boardPiece.color == ChessColor.WHITE) {
+                            boardLabels[row][col].setIcon(WHITEKING);
+                        }
+                        if (boardPiece instanceof King && boardPiece.color == ChessColor.BLACK) {
+                            boardLabels[row][col].setIcon(BLACKKING);
+                        }
+                        if (boardPiece instanceof Queen && boardPiece.color == ChessColor.WHITE) {
+                            boardLabels[row][col].setIcon(WHITEQUEEN);
+                        }
+                        if (boardPiece instanceof Queen && boardPiece.color == ChessColor.BLACK) {
+                            boardLabels[row][col].setIcon(BLACKQUEEN);
                         }
                     } else {
                         boardLabels[row][col].setIcon(null);
