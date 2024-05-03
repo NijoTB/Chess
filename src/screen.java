@@ -14,23 +14,18 @@ public class screen {
         private ImageIcon[][] pieceIcons;
 
 
-        private static final ImageIcon BLACKPAWN =  new ImageIcon(new ImageIcon("resources/PawnBlackChessPiece.png").getImage().getScaledInstance((int) ((double) SQUARE_SIZE * 0.5), (int) ((double) SQUARE_SIZE * 0.75), Image.SCALE_SMOOTH));
-        private static final ImageIcon WHITEPAWN =  new ImageIcon(new ImageIcon("resources/PawnWhiteChessPiecePNG.png").getImage().getScaledInstance((int) ((double) SQUARE_SIZE * 0.5), (int) ((double) SQUARE_SIZE * 0.75), Image.SCALE_SMOOTH));
-        private static final ImageIcon BLACKROOK =  new ImageIcon(new ImageIcon("resources/RookBlackChessPiece.png").getImage().getScaledInstance((int) ((double) SQUARE_SIZE * 0.5), (int) ((double) SQUARE_SIZE * 0.75), Image.SCALE_SMOOTH));
-        private static final ImageIcon WHITEROOK =  new ImageIcon(new ImageIcon("resources/RookWhiteChessPiece.png").getImage().getScaledInstance((int) ((double) SQUARE_SIZE * 0.5), (int) ((double) SQUARE_SIZE * 0.75), Image.SCALE_SMOOTH));
-        private static final ImageIcon BLACKBISHOP =  new ImageIcon(new ImageIcon("resources/BishopBlackChessPiece.png").getImage().getScaledInstance((int) ((double) SQUARE_SIZE * 0.5), (int) ((double) SQUARE_SIZE * 0.75), Image.SCALE_SMOOTH));
-        private static final ImageIcon WHITEBISHOP =  new ImageIcon(new ImageIcon("resources/BishopWhiteChessPiece.png").getImage().getScaledInstance((int) ((double) SQUARE_SIZE * 0.5), (int) ((double) SQUARE_SIZE * 0.75), Image.SCALE_SMOOTH));
-        private static final ImageIcon BLACKKNIGHT =  new ImageIcon(new ImageIcon("resources/KnightBlackChessPiece.png").getImage().getScaledInstance((int) ((double) SQUARE_SIZE * 0.5), (int) ((double) SQUARE_SIZE * 0.75), Image.SCALE_SMOOTH));
-        private static final ImageIcon WHITEKNIGHT =  new ImageIcon(new ImageIcon("resources/KnightWhiteChessPiece.png").getImage().getScaledInstance((int) ((double) SQUARE_SIZE * 0.5), (int) ((double) SQUARE_SIZE * 0.75), Image.SCALE_SMOOTH));
-        private static final ImageIcon BLACKKING =  new ImageIcon(new ImageIcon("resources/KingBlackChessPiece.png").getImage().getScaledInstance((int) ((double) SQUARE_SIZE * 0.5), (int) ((double) SQUARE_SIZE * 0.75), Image.SCALE_SMOOTH));
-        private static final ImageIcon WHITEKING =  new ImageIcon(new ImageIcon("resources/KingWhiteChessPiece.png").getImage().getScaledInstance((int) ((double) SQUARE_SIZE * 0.5), (int) ((double) SQUARE_SIZE * 0.75), Image.SCALE_SMOOTH));
-        private static final ImageIcon BLACKQUEEN =  new ImageIcon(new ImageIcon("resources/QueenBlackChessPiece.png").getImage().getScaledInstance((int) ((double) SQUARE_SIZE * 0.5), (int) ((double) SQUARE_SIZE * 0.75), Image.SCALE_SMOOTH));
-        private static final ImageIcon WHITEQUEEN =  new ImageIcon(new ImageIcon("resources/QueenWhiteChessPiece.png").getImage().getScaledInstance((int) ((double) SQUARE_SIZE * 0.5), (int) ((double) SQUARE_SIZE * 0.75), Image.SCALE_SMOOTH));
-
-
-
-
-
+        private static final ImageIcon BLACKPAWN = new ImageIcon(new ImageIcon("resources/PawnBlackChessPiece.png").getImage().getScaledInstance((int) ((double) SQUARE_SIZE * 0.5), (int) ((double) SQUARE_SIZE * 0.75), Image.SCALE_SMOOTH));
+        private static final ImageIcon WHITEPAWN = new ImageIcon(new ImageIcon("resources/PawnWhiteChessPiecePNG.png").getImage().getScaledInstance((int) ((double) SQUARE_SIZE * 0.5), (int) ((double) SQUARE_SIZE * 0.75), Image.SCALE_SMOOTH));
+        private static final ImageIcon BLACKROOK = new ImageIcon(new ImageIcon("resources/RookBlackChessPiece.png").getImage().getScaledInstance((int) ((double) SQUARE_SIZE * 0.5), (int) ((double) SQUARE_SIZE * 0.75), Image.SCALE_SMOOTH));
+        private static final ImageIcon WHITEROOK = new ImageIcon(new ImageIcon("resources/RookWhiteChessPiece.png").getImage().getScaledInstance((int) ((double) SQUARE_SIZE * 0.5), (int) ((double) SQUARE_SIZE * 0.75), Image.SCALE_SMOOTH));
+        private static final ImageIcon BLACKBISHOP = new ImageIcon(new ImageIcon("resources/BishopBlackChessPiece.png").getImage().getScaledInstance((int) ((double) SQUARE_SIZE * 0.5), (int) ((double) SQUARE_SIZE * 0.75), Image.SCALE_SMOOTH));
+        private static final ImageIcon WHITEBISHOP = new ImageIcon(new ImageIcon("resources/BishopWhiteChessPiece.png").getImage().getScaledInstance((int) ((double) SQUARE_SIZE * 0.5), (int) ((double) SQUARE_SIZE * 0.75), Image.SCALE_SMOOTH));
+        private static final ImageIcon BLACKKNIGHT = new ImageIcon(new ImageIcon("resources/KnightBlackChessPiece.png").getImage().getScaledInstance((int) ((double) SQUARE_SIZE * 0.5), (int) ((double) SQUARE_SIZE * 0.75), Image.SCALE_SMOOTH));
+        private static final ImageIcon WHITEKNIGHT = new ImageIcon(new ImageIcon("resources/KnightWhiteChessPiece.png").getImage().getScaledInstance((int) ((double) SQUARE_SIZE * 0.5), (int) ((double) SQUARE_SIZE * 0.75), Image.SCALE_SMOOTH));
+        private static final ImageIcon BLACKKING = new ImageIcon(new ImageIcon("resources/KingBlackChessPiece.png").getImage().getScaledInstance((int) ((double) SQUARE_SIZE * 0.5), (int) ((double) SQUARE_SIZE * 0.75), Image.SCALE_SMOOTH));
+        private static final ImageIcon WHITEKING = new ImageIcon(new ImageIcon("resources/KingWhiteChessPiece.png").getImage().getScaledInstance((int) ((double) SQUARE_SIZE * 0.5), (int) ((double) SQUARE_SIZE * 0.75), Image.SCALE_SMOOTH));
+        private static final ImageIcon BLACKQUEEN = new ImageIcon(new ImageIcon("resources/QueenBlackChessPiece.png").getImage().getScaledInstance((int) ((double) SQUARE_SIZE * 0.5), (int) ((double) SQUARE_SIZE * 0.75), Image.SCALE_SMOOTH));
+        private static final ImageIcon WHITEQUEEN = new ImageIcon(new ImageIcon("resources/QueenWhiteChessPiece.png").getImage().getScaledInstance((int) ((double) SQUARE_SIZE * 0.5), (int) ((double) SQUARE_SIZE * 0.75), Image.SCALE_SMOOTH));
 
 
         public ChessGUI() {
@@ -64,7 +59,7 @@ public class screen {
 
                     if (pieceIcons[row][col] != null) {
                         boardLabels[row][col] = new JLabel(pieceIcons[row][col]);
-                    }else{
+                    } else {
                         boardLabels[row][col] = new JLabel();
                     }
 
@@ -72,7 +67,6 @@ public class screen {
                     chessPanel.add(square);
                 }
             }
-
 
 
             // Add mouse listener for interaction
@@ -108,10 +102,33 @@ public class screen {
 
 
         private void movePiece(int fromRow, int fromCol, int toRow, int toCol) {
+            MouseAdapter ma = new MouseAdapter() {
+
+                private Point offset;
+
+                @Override
+                public void mousePressed(MouseEvent e) {
+                    Rectangle bounds = getImageBounds();
+                    Point mp = e.getPoint();
+                    if (bounds.contains(mp)) {
+                        offset = new Point();
+                        offset.x = mp.x - bounds.x;
+                        offset.y = mp.y - bounds.y;
+                    }
+                }protected Rectangle getImageBounds() {
+                    Rectangle bounds = new Rectangle(0, 0, 0, 0);
+                    if (img != null) {
+                        bounds.setLocation(imgPoint);
+                        bounds.setSize(img.getWidth(), img.getHeight());
+                    }
+                    return bounds;
+                }
+            };
             // Perform move logic here (not implemented in this example)
             // For demonstration, just move the piece visually on the GUI
             pieceIcons[toRow][toCol] = pieceIcons[fromRow][fromCol];
             pieceIcons[fromRow][fromCol] = null;
+
             updateBoardGUI();
         }
 
@@ -127,6 +144,7 @@ public class screen {
                 }
             }
         }
+
         public void updateBoardGUI(Board board) {
             // Update GUI with piece icons
             for (int row = 0; row < BOARD_SIZE; row++) {
