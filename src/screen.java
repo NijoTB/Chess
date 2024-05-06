@@ -1,5 +1,7 @@
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.io.File;
@@ -10,7 +12,7 @@ public class screen {
     public static class ChessGUI extends JFrame {
         private static final int BOARD_SIZE = 8;
         private static final int SQUARE_SIZE = 60; // Size of each square in pixels
-        private JLabel[][] boardLabels;
+        private JButton[][] boardLabels;
         private ImageIcon[][] pieceIcons;
 
 
@@ -39,7 +41,7 @@ public class screen {
             JPanel chessPanel = new JPanel(new GridLayout(BOARD_SIZE, BOARD_SIZE));
             add(chessPanel);
 
-            boardLabels = new JLabel[BOARD_SIZE][BOARD_SIZE];
+            boardLabels = new JButton[BOARD_SIZE][BOARD_SIZE];
             pieceIcons = new ImageIcon[BOARD_SIZE][BOARD_SIZE];
             // Initialize the board with piece icons
 
@@ -58,10 +60,12 @@ public class screen {
                     }
 
                     if (pieceIcons[row][col] != null) {
-                        boardLabels[row][col] = new JLabel(pieceIcons[row][col]);
+                        boardLabels[row][col] = new JButton(pieceIcons[row][col]);
                     } else {
-                        boardLabels[row][col] = new JLabel();
+                        boardLabels[row][col] = new JButton();
                     }
+
+                    boardLabels[row][col].addActionListener(new ButtonActionListener(col, row));
 
                     square.add(boardLabels[row][col], BorderLayout.CENTER);
                     chessPanel.add(square);
@@ -110,17 +114,21 @@ public class screen {
                 public void mousePressed(MouseEvent e) {
                     Rectangle bounds = getImageBounds();
                     Point mp = e.getPoint();
+                    System.out.println("Clicked");
                     if (bounds.contains(mp)) {
                         offset = new Point();
                         offset.x = mp.x - bounds.x;
                         offset.y = mp.y - bounds.y;
+                        System.out.println(offset.x + " " + offset.y);
                     }
-                }protected Rectangle getImageBounds() {
+                }
+
+                protected Rectangle getImageBounds() {
                     Rectangle bounds = new Rectangle(0, 0, 0, 0);
-                    if (img != null) {
-                        bounds.setLocation(imgPoint);
-                        bounds.setSize(img.getWidth(), img.getHeight());
-                    }
+//                    if (img != null) {
+//                        bounds.setLocation(imgPoint);
+//                        bounds.setSize(img.getWidth(), img.getHeight());
+//                    }
                     return bounds;
                 }
             };
