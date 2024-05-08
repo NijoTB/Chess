@@ -10,7 +10,7 @@ public class PawnTests {
         Board testBoard = new Board(false);
         Move moveUp = new Move(4,1,4, 2);
 
-        Pawn moveTest = new Pawn( "pawn", ChessColor.BLACK, '♙' );
+        Pawn moveTest = new Pawn( "pawn", ChessColor.WHITE, '♟' );
         testBoard.display();
         assertTrue(moveTest.canMove(testBoard, moveUp));
     }
@@ -19,7 +19,7 @@ public class PawnTests {
         Board testBoard = new Board(false);
         Move moveUp = new Move(2,1,2, 3);
 
-        Pawn moveTest = new Pawn( "pawn", ChessColor.BLACK, '♙' );
+        Pawn moveTest = new Pawn( "pawn", ChessColor.WHITE, '♟' );
         testBoard.display();
         assertTrue(moveTest.canMove(testBoard, moveUp));
     }
@@ -107,5 +107,35 @@ public class PawnTests {
         Pawn moveTest = new Pawn( "pawn", ChessColor.BLACK, '♙' );
         testBoard.display();
         assertFalse(moveTest.canMove(testBoard, moveUp));
+    }
+
+
+    // can capture opposite colored piece
+    @Test
+    public void capturePiece(){
+        Board testBoard = new Board(false);
+        Move capturePiece = new Move(0,0,1, 1);
+
+
+        Pawn capturing = new Pawn( "pawn", ChessColor.WHITE, '♟' );
+        Pawn captured = new Pawn("pawn", ChessColor.BLACK, '♙' );
+        testBoard.addPiece(captured,1, 1);
+
+        assertTrue(capturing.canMove(testBoard, capturePiece));
+    }
+
+
+    // can't capture same colored piece
+    @Test
+    public void capturePieceFriendlyFire(){
+        Board testBoard = new Board(false);
+        Move capturePiece = new Move(0,0,1, 1);
+
+
+        Pawn capturing = new Pawn( "pawn", ChessColor.WHITE, '♟' );
+        Pawn captured = new Pawn( "pawn", ChessColor.WHITE, '♙' );
+        testBoard.addPiece(captured,1, 1);
+
+        assertFalse(capturing.canMove(testBoard, capturePiece));
     }
 }

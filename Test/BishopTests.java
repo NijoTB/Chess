@@ -109,5 +109,35 @@ public class BishopTests {
 
         assertFalse(moveTest.canMove(testBoard, moveSomewhereRandom));
     }
+
+
+    // can capture opposite colored piece
+    @Test
+    public void capturePiece(){
+        Board testBoard = new Board(false);
+        Move capturePiece = new Move(0,0,2, 2);
+
+
+        Bishop capturing = new Bishop( "bishop", ChessColor.WHITE, '♝' );
+        Bishop captured = new Bishop( "bishop", ChessColor.BLACK, '♗' );
+        testBoard.addPiece(captured,2, 2);
+
+        assertTrue(capturing.canMove(testBoard, capturePiece));
+    }
+
+
+    // can't capture same colored piece
+    @Test
+    public void capturePieceFriendlyFire(){
+        Board testBoard = new Board(false);
+        Move capturePiece = new Move(0,0,2, 2);
+
+
+        Bishop capturing = new Bishop( "bishop", ChessColor.WHITE, '♝' );
+        Bishop captured = new Bishop( "bishop", ChessColor.WHITE, '♝' );
+        testBoard.addPiece(captured,2, 2);
+
+        assertFalse(capturing.canMove(testBoard, capturePiece));
+    }
 }
 

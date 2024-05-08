@@ -103,4 +103,34 @@ public class KingTests {
 
         assertFalse(moveTest.canMove(testBoard, moveUp));
     }
+
+
+    // can capture opposite colored piece
+    @Test
+    public void capturePiece(){
+        Board testBoard = new Board(false);
+        Move capturePiece = new Move(0,0,1, 1);
+
+
+        King capturing = new King( "king", ChessColor.WHITE, '♚' );
+        King captured = new King("king", ChessColor.BLACK, '♔' );
+        testBoard.addPiece(captured,1, 1);
+
+        assertTrue(capturing.canMove(testBoard, capturePiece));
+    }
+
+
+    // can't capture same colored piece
+    @Test
+    public void capturePieceFriendlyFire(){
+        Board testBoard = new Board(false);
+        Move capturePiece = new Move(0,0,1, 1);
+
+
+        King capturing = new King( "king", ChessColor.WHITE, '♚' );
+        King captured = new King( "king", ChessColor.WHITE, '♚' );
+        testBoard.addPiece(captured,1, 1);
+
+        assertFalse(capturing.canMove(testBoard, capturePiece));
+    }
 }
