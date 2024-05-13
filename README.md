@@ -4,6 +4,8 @@ Creator: Nijo Burton Jr.
 
 Chess in Java:
 play in the terminal or activate the GUI.
+
+run the "main" class to start.
 swich between modes by commenting the current game start code and uncommenting the other game start code in the "Main" class.
 
 
