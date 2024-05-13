@@ -30,7 +30,7 @@ public class screen {
         private static final ImageIcon WHITEQUEEN = new ImageIcon(new ImageIcon("resources/QueenWhiteChessPiece.png").getImage().getScaledInstance((int) ((double) SQUARE_SIZE * 0.5), (int) ((double) SQUARE_SIZE * 0.75), Image.SCALE_SMOOTH));
 
 
-        public ChessGUI() {
+        public ChessGUI(PlayerGUI plr) {
             System.out.println("here");
             setTitle("Chess Board");
             setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -44,7 +44,6 @@ public class screen {
             boardLabels = new JButton[BOARD_SIZE][BOARD_SIZE];
             pieceIcons = new ImageIcon[BOARD_SIZE][BOARD_SIZE];
             // Initialize the board with piece icons
-
 
             // Populate the chessboard with squares and piece icons
             for (int row = 0; row < BOARD_SIZE; row++) {
@@ -65,7 +64,7 @@ public class screen {
                         boardLabels[row][col] = new JButton();
                     }
 
-                    boardLabels[row][col].addActionListener(new ButtonActionListener(col, row));
+                    boardLabels[row][col].addActionListener(new ButtonActionListener(plr, col, row));
 
                     square.add(boardLabels[row][col], BorderLayout.CENTER);
                     chessPanel.add(square);
@@ -202,9 +201,9 @@ public class screen {
             }
         }
 
-        public static void main(String[] args) {
-            SwingUtilities.invokeLater(ChessGUI::new);
-        }
+//        public static void main(String[] args) {
+//            SwingUtilities.invokeLater(ChessGUI::new);
+//        }
     }
 
 }
